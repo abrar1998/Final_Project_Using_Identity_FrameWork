@@ -1,0 +1,22 @@
+﻿@using Microsoft.AspNetCore.Identity
+<div class="container">
+    <h1 class="text-md-center">Welcome to The Admin DashBoard</h1>
+    <h3 class="text-sm-center"> Hello @User.Identity.Name</h3>
+    
+    <hr />
+
+    <div class="row">
+        <div class="col-sm">
+            <button class="btn">
+                <a style="text-decoration:none" asp-action="UserList" asp-controller="Admin"> Click Here To See All Users</a>
+            </button>
+        </div>
+        <div class="col-sm">
+            <button class="btn">
+                <a style="text-decoration:none" asp-action="StudentList" asp-controller="Admin"> Click Here To See All Students</a>
+            </button>
+        </div>
+       
+    </div>
+
+</div>

@@ -1,0 +1,42 @@
+﻿@using Microsoft.AspNetCore.Identity
+@model List<ApplicationUser>
+
+
+<div class="container-xxl">
+
+    <h3 class="text-sm-center">List of Registered Users</h3>
+
+    <table class="table-responsive">
+
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Password</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                    <td>@item.Email</td>
+                    <td>@item.PasswordHash</td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+
+</div>
+
+<div class="container">
+    <div class="row-cols-5">
+        <button class="btn">
+            <a style="text-decoration:none" asp-action="RegisterUser" asp-controller="Account">Add More Users</a>
+        </button>
+    </div>
+</div>
